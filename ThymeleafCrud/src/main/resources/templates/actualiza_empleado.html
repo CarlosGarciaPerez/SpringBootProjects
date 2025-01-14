@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualiza Empleado</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admnistracion de Empleados</h1>
+        <hr>
+        <h2>Actualizar Empleado</h2>
+        <form action="#" th:action="@{/guardarEmpleado}" th:object="${empleado}"
+             method="POST">
+              <input type="hidden" th:field="*{id}" />
+
+              <input type="text" th:field="*{nombre}" class="form-control mb-4 col-4">
+
+              <input type="text" th:field="*{apellidoPaterno}" class="form-control mb-4 col-4">
+
+              <input type="text" th:field="*{apellidoMaterno}" class="form-control mb-4 col-4">
+
+              <input type="text" th:field="*{email}" class="form-control mb-4 col-4">
+
+            <button type="submit" class="btn btn-info col-2"> Actualiza Empleado</button>
+
+        </form>
+        <a th:href = "@{/}"> Regresar a lista de Empleados</a>
+    </div>
+</body>
+</html>
+
