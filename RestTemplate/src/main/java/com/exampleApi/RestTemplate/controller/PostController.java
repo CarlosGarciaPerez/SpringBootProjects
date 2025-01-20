@@ -31,11 +31,12 @@ public class PostController {
         return new ResponseEntity<>(postService.save(postDto), HttpStatus.CREATED);
     }
 
-    @PutMapping("post/{id}")
+    @PutMapping("/post/{id}")
     public ResponseEntity<PostDto> update (@PathVariable Integer id, @RequestBody PostDto postDto){
             return new ResponseEntity<>(postService.update(id, postDto), HttpStatus.OK);
     }
 
+    @DeleteMapping("/post/{id}")
     public ResponseEntity<?> delete (@PathVariable Integer id){
         postService.delete(id);
         return new ResponseEntity<>("Post eliminado", HttpStatus.OK);

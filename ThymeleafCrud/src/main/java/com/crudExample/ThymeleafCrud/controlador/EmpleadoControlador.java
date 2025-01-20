@@ -15,7 +15,7 @@ import com.crudExample.ThymeleafCrud.servicio.IEmpleadoServicio;
 public class EmpleadoControlador {
 
 	@Autowired
-	private IEmpleadoServicio iempleadoServicio;
+	private IEmpleadoServicio iempleadoServicio;de Em
 	
 	@GetMapping("/")
 	public String viewHomePage(Model model) {
